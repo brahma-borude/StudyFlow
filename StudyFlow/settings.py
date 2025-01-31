@@ -37,15 +37,14 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    
+    "apps.users",
+    "apps.subjects",
+    
+    #Third-party Packages
+    "rest_framework", # For API support
 ]
 
-EXTERNAL_APPS = [
-    "rest_framework",
-    "users",
-    "subjects",
-]
-
-INSTALLED_APPS += EXTERNAL_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -62,7 +61,7 @@ ROOT_URLCONF = "StudyFlow.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": ["templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

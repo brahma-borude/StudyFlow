@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-# Create your views here.
+def SignIn(request):
+    return render(request, "signin.html")
+
+def SignUp(request):
+    return render(request, "signup.html")
