@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}StudyFlow{% endblock title %}
+
+
+
+{% block content %}
+<div class="logo">
+<img src="{% static 'images/sf.png' %}"  alt="StudyFlow">
+</div>
+
+<div class="home-text">
+    <h1>StudyFlow</h1>
+</div>
+
+<a href="{% url "signin" %}">
+    <button class="button">Get Started</button>
+</a>
+
+{% endblock content %}

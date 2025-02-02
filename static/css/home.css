@@ -1,0 +1,26 @@
+body{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #212121;
+}
+
+h1{
+    color: #EAEAEA;
+}
+
+.logo img{
+    height: 50px;
+    width: auto;
+    padding: 25px;
+}
+
+.button{
+    position: relative;
+    padding: 10px 22px;
+    background: #0568A6;
+    color: #EAEAEA;
+    border: none;
+    border-radius: 8px;
+    font-weight: 400;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
