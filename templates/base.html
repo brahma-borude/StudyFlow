@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href={% static "images/studyflow.ico" %}>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <title>{% block title %}{% endblock title %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    {% block extra_css %}{% endblock extra_css %}
 </head>
 <body>
     {% block content %}{% endblock content %}

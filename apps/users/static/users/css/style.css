@@ -1,0 +1,132 @@
+body {
+    background-color: #1e1e1e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+.logo_2 {
+    justify-content: center;
+    display: flex;
+    border: 1px solid #EAEAEA;
+    height: 80px;
+}
+
+.btn-google {
+    background-color: #0568A6; /* Cyan Blue */
+    color: (#0845a6);
+    color: #EAEAEA;
+    border: none;
+    margin: 25px auto;
+    padding: 5px 20px;
+    font-size: 16px;
+    display: inline-block;
+    transition: all 0.1s ease;
+    border-radius: 5px;
+}
+.btn-google:hover {
+    background-color: #0d62ca; /* Slightly darker cyan for hover effect */
+    /* transform: scale(1.05); Enlarge the button on hover */
+    box-shadow: 0 4px 8px rgba(194, 212, 26, 0.5); /* Highlight with a shadow */
+    border: 1px solid #00BCD4; /* Thin glow on hover */
+}
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0;
+}
+.divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #6C6C6C;
+}
+.divider:not(:empty)::before {
+    margin-right: 10px;
+}
+.divider:not(:empty)::after {
+    margin-left: 10px;
+}
+.name-checkboxes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px; /* Adjust the distance between the two text inputs */
+}
+.name-checkboxes input {
+    background-color: #333; /* Darker background for input fields */
+    border: 1px solid #444; /* Border for separation */
+    color: white; /* Text color */
+    transition: all 0.1s ease; /* Smooth transition for hover effect */
+    border-radius: 5px;
+    padding: 10px;
+}
+.name-checkboxes input:first-child {
+    margin-right: 10px; /* Space between first name and last name */
+}
+.name-checkboxes input::placeholder {
+    color: #bbb; /* Light placeholder color */
+}
+.form-control {
+    background-color: #333; /* Dark background for all input fields */
+    border: 1px solid #444; /* Border for separation */
+    color: white; /* Text color */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 5px;
+    padding: 10px;
+}
+.form-control::placeholder {
+    color: #bbb; /* Light placeholder color */
+}
+.form-control:hover,
+.name-checkboxes input:hover {
+    transform: scale(1.05); /* Slightly enlarge the input fields */
+    border-color: #0568A6; /* Highlight border color on hover */
+    box-shadow: 0 0 5px #0568A6; /* Add a subtle glow effect */
+    border: 1px solid #0568A6; /* Thin glow on hover */
+}
+.welcome-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.7); /* Glow effect */
+    animation: glow-animation 1s infinite alternate; /* Animation for continuous glow */
+}
+/* @keyframes glow-animation {
+    0% {
+        text-shadow: 0 0 10px rgba(0, 188, 212, 0.7), 0 0 20px rgba(0, 188, 212, 0.6);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(0, 188, 212, 1), 0 0 30px rgba(0, 188, 212, 0.8);
+    }
+} */
+.btn-primary {
+    background-color: #0568A6; /* Primary button color */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    display: inline-block;
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #5a6db1; /* Slightly darker shade for hover */
+    box-shadow: 0 4px 8px rgba(114, 137, 218, 0.6); /* Add a soft glow */
+    border: 1px solid #7289da; /*Add a thin border glow */
+}
+
+
+
+p{
+    color: #8C8C8C;
+}
