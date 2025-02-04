@@ -1,0 +1,18 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+
+<div class="sidebar">
+    <div class="top-section">
+        <div class="user-info">
+            <img src="username.png" alt="User Logo" class="user-logo">
+            <button> John Doe</button>
+        </div>
+        <div class="divider"></div>
+        <ul>
+            <li><a href="{% url "dashboard"%}"><button>My Plans</button></a></li>
+            <li><a href="{% url "settings" %}"><button>Settings</button></a></li>
+        </ul>
+    </div>
+    <button>Logout</button>
+</div>

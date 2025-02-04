@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+
+
+.sidebar {
+    width: 250px;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    border-right: 2px solid #333;
+}
+.top-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.user-logo {
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+}
+.divider {
+    height: 2px;
+    background-color: #333;
+    margin: 10px 0;
+}
+.sidebar button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sidebar button:hover {
+    background-color: #333;
+    border-radius: 5px;
+}
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.new-plan-btn {
+    background-color: rgba(5, 104, 166, 1);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.new-plan-btn:hover {
+    background-color: #0056b3;
+}
+.top-right-container {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.top-divider {
+    position: absolute;
+    top: 102px;
+    right: 15px;
+    width: calc(99% - 290px);
+    height: 2px;
+    background-color: #333;
+}
+
+p{
+    color: #8C8C8C;
+}

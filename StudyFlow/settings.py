@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     
     "apps.users",
     "apps.subjects",
+    "apps.dashboard",
     
     #Third-party Packages
     "rest_framework", # For API support

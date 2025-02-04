@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'dashboard/css/dashboard.css'%}">
+{% endblock extra_css %}
+
+{% block title %}Dashboard - StudyFlow{% endblock title %}
+
+{% block content %}
+{% include "dashboard/includes/sidebar.html" %}
+
+    <div class="content">
+        <div class="welcome-text">
+            <h2>Welcome to StudyFlow, John 👋</h2>
+        </div>
+        <img src="{% static 'dashboard\media\illustration.png'%}" alt="Study Illustration" width=300>
+        <h3>Craft Your Unique Learning Path!</h3>
+        <p>Click below to create a personalized learning plan that fits your goals and pace!</p>
+        <button class="new-plan-btn">+ New Plan</button>
+    </div>
+
+    <div class="top-right-container">
+        <button class="new-plan-btn">+ New Plan</button>
+    </div>
+    <div class="top-divider"></div>
+    
+{% endblock content %}

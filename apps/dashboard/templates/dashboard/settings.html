@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'dashboard/css/dashboard.css'%}">
+{% endblock extra_css %}
+
+{% block title %}Settings{% endblock title %}
+
+{% block content %}
+
+{% include "dashboard/includes/sidebar.html" %}
+
+<h1>Settings</h1>
+
+{% endblock content %}
