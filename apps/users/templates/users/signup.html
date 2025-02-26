@@ -7,7 +7,7 @@
 {% endblock extra_css %}
 
 
-{% block title %}SignUp{% endblock title %}
+{% block title %}SignUp - StudyFlow{% endblock title %}
 
 
 {% block content %}
@@ -31,20 +31,25 @@
         <img src="https://www.svgrepo.com/show/303108/google-icon-logo.svg" width="20"> Continue with Google
     </button>
     <div class="divider">or</div>
-    <form>
+    <form action="" method="POST">
+        {% csrf_token %}
         <div class="mb-3 name-checkboxes">
-            <input type="text" class="form-control" placeholder="First name">
-            <input type="text" class="form-control" placeholder="Last name (Optional)">
+            {{form.first_name}}
+            {{form.last_name}}
         </div>
         <div class="mb-3">
-            <input type="email" class="form-control" placeholder="Email address">
+            {{form.email}}
         </div>
         <div class="mb-3">
-            <input type="password" class="form-control" placeholder="Password">
+            {{form.username}}
         </div>
-        <a href="{% url "dashboard" %}">
-            <button type="submit" class="btn-primary w-100">Continue</button>
-        </a>
+        <div class="mb-3">
+            {{form.password1}}
+        </div>
+        <div class="mb-3">
+            {{form.password2}}
+        </div>
+        <button type="submit" class="btn-primary w-100">Continue</button>
     </form>
     <p class="mt-3">Already have an account? <a href="{% url "signin" %}" class="text-light">Sign In</a></p>
 </div>

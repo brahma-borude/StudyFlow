@@ -5,7 +5,7 @@ from . import views
 
 urlpatterns = [
     path("", views.dashboard_page, name="dashboard"),
-    path("/settings", views.settings, name="settings"),
+    path("settings/", views.settings, name="settings"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

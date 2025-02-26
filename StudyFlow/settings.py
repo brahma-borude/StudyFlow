@@ -16,7 +16,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -28,11 +27,12 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     
     "apps.users",
-    "apps.subjects",
     "apps.dashboard",
     
     #Third-party Packages
     "rest_framework", # For API support
+    "crispy_forms",
+    "crispy_bootstrap4",
 ]
 
 
@@ -116,6 +116,9 @@ STATIC_URL = "static/"
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MEDIA_URL = "media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

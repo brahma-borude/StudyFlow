@@ -5,7 +5,7 @@ from . import views
 
 urlpatterns = [
     path("signin/", views.SignIn, name="signin"),
-    path("", views.SignUp, name="signup"),
+    path("signup/", views.SignUp, name="signup"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
