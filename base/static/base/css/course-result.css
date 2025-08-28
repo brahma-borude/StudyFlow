@@ -1,0 +1,8 @@
+body{
+    background-color: #212121;
+    color: #ffffff;
+}
+
+.container {
+    background-color: #212121 !important; /* white background */
+}
