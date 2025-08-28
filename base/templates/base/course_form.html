@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Create Course - StudyFlow{% endblock title %}
+
+{% block extra_css %} 
+<link rel="stylesheet" href="{% static 'base/css/course_form.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="w-50">
+        <h2 class="text-center"><i class="bi bi-stars" style="color: #0768a6"></i> Create Your Mini Course</h2>
+        <hr class="section-title-hr" style="border: 2px solid #ffffffff">
+        <form method="POST" action="">
+            {% csrf_token %}
+            
+            <div class=" mb-3 text-start">
+                <label for="topic" class="form-label mb-0">Goal</label>
+                <p class="mb-0">What is Your Learning Goal?</p>
+                <input type="text" class="form-control" id="topic" name="topic" placeholder="e.g., Calculus" required>
+            </div>
+            
+            <div class="mb-3 text-start">
+                <label for="stage" class="form-label mb-0">Learning Stage</label>
+                <p class="mb-0">Where are You Starting From?</p>
+                <select class="form-select" id="stage" name="stage" required>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+            </div>
+            
+            <div class="mb-3 text-start">
+                <label for="topic" class="form-label">Name Your Learning Plan</label>
+                <input type="text" class="form-control" id="plan_name" name="plan_name" placeholder="Enter your plan title..." required>
+            </div>
+            <a href="{% url 'dashboard' %}" type="submit" class="btn btn-primary" style="background-color: gray; border-color: #3c3c3c;">
+                Cancle
+            </a>
+            <button type="submit" class="btn btn-primary">
+                Generate <i class="bi bi-stars"></i> 
+            </button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock content %}
+
