@@ -5,7 +5,7 @@ from django.conf import settings
 from .models import CachedVideo
 from django.utils.timezone import now, timedelta
 
-USE_MOCK = True # set to False to use real API
+USE_MOCK = False # set to False to use real API
 
 
 
