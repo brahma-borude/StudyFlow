@@ -51,8 +51,9 @@ def fetch_youtube_videos(query):
     params = {
         "part": "snippet",
         "q": query,
+        "videoDuration":"long",
         "type": "video",
-        "maxResults": 8,
+        "maxResults": 15,
         "key": YOUTUBE_API_KEY,
     }
     response = requests.get(url, params=params).json()
@@ -65,11 +66,6 @@ def fetch_youtube_videos(query):
             "thumbnail": item["snippet"]["thumbnails"]["medium"]["url"],
         })
 
-    # Save to DB for later use
-    CachedVideo.objects.update_or_create(
-        query=query,
-        defaults={"videos": videos, "created_at": now()}
-    )
 
     return videos
 
@@ -90,7 +86,7 @@ def create_course(request):
         4. Do not include explanations, just the step titles. 
         5. Ensure the steps topics are in youtube. 
         6. Each step should build on the previous one, creating a logical learning progression.  
-        7. Limit the plan to 5 steps.
+        7. Limit the plan to 15 steps.
         Example format:
         1. Introduction to {topic}  
         2. Core Concepts of {topic}  

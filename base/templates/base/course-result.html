@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
+{% comment %} {% extends "base.html" %}
+{% load static %}
 
 {% block title %}{{plan_name}} - StudyFlow{% endblock title %}
 
@@ -65,4 +67,101 @@
         </div>
     {% endfor %}
 </div>
+{% endblock content %} {% endcomment %}
+
+
+
+{% block title %}{{ plan_name }} - StudyFlow{% endblock title %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'base/css/course-result.css' %}">
+<style>
+    body {
+    background-color: #121212;
+    color: #ddd;
+}
+.video-thumbnail {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.video-card {
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+    background-color: #212121;
+    color: #b7b7b7;
+    border: none;
+}
+.video-card:hover {
+    background-color: #0768a6;
+}
+.video-player {
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+}
+
+</style>
+{% endblock extra_css %}
+{% block content %}
+<div class="container-fluid mt-4">
+
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-0">
+        <h2 class="text-capitalize">{{ plan_name }}</h2>
+        <a href="{% url 'dashboard' %}" class="btn btn-primary mt-5" style="background-color: #0768a6">
+            <i class="bi bi-house-door-fill"></i> Dashboard
+        </a>
+    </div>
+    <p><strong>Topic:</strong> {{ topic }} | <strong>Stage:</strong> {{ stage }}</p>
+    <hr>
+
+    <div class="row">
+        <!-- Video List -->
+        <div class="col-md-4 border-end-secondary">
+            <h5 class="mb-3">Videos</h5>
+            <div class="list-group">
+                {% for step, videos in courses %}
+                    {% for video in videos %}
+                        <div class="list-group-item video-card mb-2 p-2" onclick="playVideo('https://www.youtube.com/embed/{{ video.videoId }}')">
+                            <div class="row g-2">
+                                <div class="col-4">
+                                    <img src="{{ video.thumbnail }}" class="video-thumbnail" alt="{{ video.title }}">
+                                </div>
+                                <div class="col-8">
+                                    <h6 class="mb-1">{{ video.title }}</h6>
+                                    <p class="small text-muted">{{ step }}</p>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="form-check-input mt-2"
+                                            name="completed_videos"
+                                            value="{{ video.videoId }}"> completed
+                                </div>
+                            </div>
+                        </div>
+                    {% empty %}
+                        <p class="text-muted">No videos found.</p>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Video Player -->
+        <div class="col-md-8 ps-4">
+            <h5 class="mb-3">Now Playing</h5>
+            <iframe id="videoPlayer" class="video-player"
+            src="https://www.youtube.com/embed/{{ courses.0.1.0.videoId|default:'' }}"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+    </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function playVideo(url) {
+        document.getElementById("videoPlayer").src = url;
+    }
+</script>
 {% endblock content %}
