@@ -94,6 +94,7 @@
 }
 .video-card:hover {
     background-color: #0768a6;
+    color: #fff;
 }
 .video-player {
     width: 100%;
@@ -122,20 +123,19 @@
             <h5 class="mb-3">Videos</h5>
             <div class="list-group">
                 {% for step, videos in courses %}
+                <div class="card-header text-white mb-2" style="background-color: #0768a6;">
+                    <h5 class="mb-0" >{{ step }}</h5>
+                </div>
                     {% for video in videos %}
-                        <div class="list-group-item video-card mb-2 p-2" onclick="playVideo('https://www.youtube.com/embed/{{ video.videoId }}')">
+                        <div class="list-group-item video-card m-2 p-2" onclick="playVideo('https://www.youtube.com/embed/{{ video.videoId }}')">
                             <div class="row g-2">
                                 <div class="col-4">
                                     <img src="{{ video.thumbnail }}" class="video-thumbnail" alt="{{ video.title }}">
                                 </div>
                                 <div class="col-8">
-                                    <h6 class="mb-1">{{ video.title }}</h6>
-                                    <p class="small text-muted">{{ step }}</p>
-                                </div>
-                                <div>
+                                    <h6 class="mb-4">{{ video.title }}</h6>
                                     <input type="checkbox" class="form-check-input mt-2"
-                                            name="completed_videos"
-                                            value="{{ video.videoId }}"> completed
+                                            name="completed_videos"> completed
                                 </div>
                             </div>
                         </div>

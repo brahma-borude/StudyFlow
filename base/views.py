@@ -2,10 +2,10 @@ from django.shortcuts import render
 from groq import Groq
 import requests
 from django.conf import settings
-from .models import CachedVideo
+
 from django.utils.timezone import now, timedelta
 
-USE_MOCK = False # set to False to use real API
+USE_MOCK = True # set to False to use real API
 
 
 
@@ -13,7 +13,8 @@ YOUTUBE_API_KEY = settings.YOUTUBE_API_KEY
 client = Groq(api_key=settings.GROQ_API_KEY)
 
 def dashboard(request):
-    return render(request, "base/dashboard.html")
+    username=request.session.get("username")
+    return render(request, "base/dashboard.html", {"username":username})
 
 
 def fetch_youtube_videos(query):
@@ -39,12 +40,6 @@ def fetch_youtube_videos(query):
             "thumbnail": "https://img.youtube.com/vi/3JZ_D3ELwOQ/mqdefault.jpg"
         },
     ]
-
-    cached = CachedVideo.objects.filter(query=query).first()
-    if cached:
-        # Optional: refresh after 7 days
-        if cached.created_at > now() - timedelta(days=7):
-            return cached.videos  
 
     # If not cached or expired → call YouTube API
     url = "https://www.googleapis.com/youtube/v3/search"
