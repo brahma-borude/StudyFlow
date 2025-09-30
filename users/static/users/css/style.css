@@ -31,10 +31,10 @@ body {
     border-radius: 5px;
 }
 .btn-google:hover {
-    background-color: #0d62ca; /* Slightly darker cyan for hover effect */
+    background-color: #0568A6; /* Slightly darker cyan for hover effect */
     /* transform: scale(1.05); Enlarge the button on hover */
-    box-shadow: 0 4px 8px rgba(194, 212, 26, 0.5); /* Highlight with a shadow */
-    border: 1px solid #00BCD4; /* Thin glow on hover */
+    box-shadow: 0 4px 8px rgba(26, 116, 212, 0.5); /* Highlight with a shadow */
+    border: 1px solid #0057c9; /* Thin glow on hover */
 }
 .divider {
     display: flex;
@@ -98,17 +98,8 @@ body {
     font-size: 1.2rem;
     color: white;
     text-align: center;
-    text-shadow: 0 0 10px rgba(0, 188, 212, 0.7); /* Glow effect */
-    animation: glow-animation 1s infinite alternate; /* Animation for continuous glow */
 }
-/* @keyframes glow-animation {
-    0% {
-        text-shadow: 0 0 10px rgba(0, 188, 212, 0.7), 0 0 20px rgba(0, 188, 212, 0.6);
-    }
-    50% {
-        text-shadow: 0 0 15px rgba(0, 188, 212, 1), 0 0 30px rgba(0, 188, 212, 0.8);
-    }
-} */
+
 .btn-primary {
     background-color: #0568A6; /* Cyan Blue */
     color: (#0845a6);
