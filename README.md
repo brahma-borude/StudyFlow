@@ -26,18 +26,74 @@ It combines Bootstrap UI + Django backend + AI (Groq) to generate structured lea
 ## 📂 Project Structure
 ```
 StudyFlow/
-│── apps/
-│   └── dashboard/        # Main dashboard app
-│── services/
-│   ├── youtube_service.py # YouTube search logic
-│   └── groq_service.py    # AI roadmap + summarization
-│── templates/
-│   └── dashboard/         # HTML templates
-│── static/
-│   └── css/               # Custom CSS
+│── .gitignore
+│── .vscode
+│   │── settings.json
+│── README.md
+│── base
+│   │── __init__.py
+│   │── admin.py
+│   │── apps.py
+│   │── models.py
+│   │── static
+│   │   │── base
+│   │   │   │── css
+│   │   │   │   │── course-result.css
+│   │   │   │   │── course_form.css
+│   │   │   │   │── dashboard.css
+│   │   │   │── media
+│   │── templates
+│   │   │── base
+│   │   │   │── course-result.html
+│   │   │   │── course_form.html
+│   │   │   │── dashboard.html
+│   │── tests.py
+│   │── urls.py
+│   │── views.py
+│── core
+│   │── __init__.py
+│   │── asgi.py
+│   │── settings.py
+│   │── urls.py
+│   │── views.py
+│   │── wsgi.py
 │── manage.py
 │── requirements.txt
-│── README.md
+│── show_structure.py
+│── static
+│   │── css
+│   │   │── home.css
+│   │── media
+│   │   │── bg1.jpg
+│   │   │── bg2.jpg
+│   │   │── bg3.jpg
+│   │   │── learning.png
+│   │   │── pfd.jpg
+│   │   │── studyflow.ico
+│   │   │── studyflow.png
+│── templates
+│   │── base.html
+│   │── home
+│   │   │── home.html
+│── users
+│   │── __init__.py
+│   │── admin.py
+│   │── apps.py
+│   │── forms.py
+│   │── models.py
+│   │── static
+│   │   │── users
+│   │   │   │── css
+│   │   │   │   │── style.css
+│   │   │   │── media
+│   │   │   │   │── studyflow.png
+│   │── templates
+│   │   │── users
+│   │   │   │── signin.html
+│   │   │   │── signup.html
+│   │── tests.py
+│   │── urls.py
+│   │── views.py
 ```
 ## ⚡ Installation
 
