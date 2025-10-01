@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 
 from django.utils.timezone import now, timedelta
 
-USE_MOCK = True # set to False to use real API
+USE_MOCK = False # set to False to use real API
 YOUTUBE_API_KEY = settings.YOUTUBE_API_KEY
 client = Groq(api_key=settings.GROQ_API_KEY)
 

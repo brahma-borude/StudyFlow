@@ -23,6 +23,14 @@ It combines Bootstrap UI + Django backend + AI (Groq) to generate structured lea
 - APIs: YouTube Search API (youtubesearchpython)
 - AI: Groq LLaMA for roadmap generation
 
+## Screenshots
+<img width="500" alt="Screenshot 2025-08-30 123348" src="https://github.com/user-attachments/assets/80bde115-2c6c-4df1-9666-fb3c243f1f29" />
+<img width="500" alt="Screenshot 2025-10-01 110706" src="https://github.com/user-attachments/assets/ac8a5cf1-12c3-422f-862f-def361288e86" />
+<img width="500" alt="Screenshot 2025-10-01 110712" src="https://github.com/user-attachments/assets/9d48bde0-ee46-4530-b825-b66b2302403f" />
+<img width="500" alt="Screenshot 2025-08-30 123404" src="https://github.com/user-attachments/assets/78b6733f-6a94-4c78-b1fd-5e965f8e0932" />
+<img width="500" alt="Screenshot 2025-08-30 123408" src="https://github.com/user-attachments/assets/8ad353a1-46df-4af6-ab42-223e0a553ed7" />
+<img width="500" alt="Screenshot 2025-10-01 111902" src="https://github.com/user-attachments/assets/16ccb733-ee41-4ea7-a43c-dd034cdbaf0d" />
+
 ## 📂 Project Structure
 ```
 StudyFlow/
