@@ -10,14 +10,7 @@
 
 {% block content %}
 
-<!-- Display messages -->
-{% if messages %}
-    {% for message in messages %}
-        <div class="alert alert-{{ message.tags }}">
-            {{message}}
-        </div>
-    {% endfor %}
-{% endif %}
+
 <div class=" d-flex">
     <!-- Sidebar -->
     <div class=" border-end vh-100 p-2" style="width: 250px;">
@@ -28,7 +21,7 @@
             style="background-color: #212121; color: white;"
             aria-expanded="false">
             <img src="{% static 'media/pfd.jpg' %}" alt="logo" style="width:30px; height:30px; border-radius:50%; object-fit:cover;" class="me-2">
-            {{username}}
+            @{{request.user}}
         </button>
         <ul class="dropdown-menu dropdown-menu-dark">
             <li><a href="{% url 'home' %}" class="dropdown-item" type="button">Home</a></li>
@@ -46,7 +39,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="#" class="btn btn-success d-flex w-100 mb-2">
+            <a href="{% url 'logout' %}" class="btn btn-success d-flex w-100 mb-2">
                 <i class="bi bi-box-arrow-right me-5"></i> Logout
             </a>
         </li>
@@ -57,7 +50,7 @@
     <!-- Main Content -->
     <div class="flex-grow-1 p-4" style="background-color: #121212;">
     <div class="d-flex justify-content-between align-items-center mb-2">
-        <h4>Welcome to StudyFlow, {{username}} 👋</h4>
+        <h4>Welcome to StudyFlow, {{request.user}} 👋</h4>
         <a href="{% url 'create-course' %}" class="btn btn-primary">+ New Plan</a>
     </div>
     <hr class="border border-secondary">

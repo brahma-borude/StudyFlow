@@ -2,19 +2,17 @@ from django.shortcuts import render
 from groq import Groq
 import requests
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
 
 from django.utils.timezone import now, timedelta
 
 USE_MOCK = True # set to False to use real API
-
-
-
 YOUTUBE_API_KEY = settings.YOUTUBE_API_KEY
 client = Groq(api_key=settings.GROQ_API_KEY)
 
+@login_required(login_url="signin")
 def dashboard(request):
-    username=request.session.get("username")
-    return render(request, "base/dashboard.html", {"username":username})
+    return render(request, "base/dashboard.html")
 
 
 def fetch_youtube_videos(query):
@@ -64,6 +62,7 @@ def fetch_youtube_videos(query):
 
     return videos
 
+
 def create_course(request):
     if request.method == "POST":
         topic = request.POST.get("topic")
@@ -93,7 +92,8 @@ def create_course(request):
             messages=[{"role": "user", "content": prompt}]
         )
 
-        raw_steps = response.choices[0].message.content.strip()
+        content = response.choices[0].message.content
+        raw_steps = content.strip() if content is not None else ""
         
         steps = [line.split(". ", 1)[-1] for line in raw_steps.split("\n") if line.strip()]
 
