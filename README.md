@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="100" alt="studyflow" src="https://github.com/user-attachments/assets/34433430-0848-47ff-bc72-b68bba6d9a95" />
+    <img width="100" alt="studyflow" src="static/media/studyflow.png" />
 </p>
 
 #  StudyFlow
@@ -24,12 +24,12 @@ It combines Bootstrap UI + Django backend + AI (Groq) to generate structured lea
 - AI: Groq LLaMA for roadmap generation
 
 ## Screenshots
-<img width="500" alt="Screenshot 2025-08-30 123348" src="https://github.com/user-attachments/assets/80bde115-2c6c-4df1-9666-fb3c243f1f29" />
-<img width="500" alt="Screenshot 2025-10-01 110706" src="https://github.com/user-attachments/assets/ac8a5cf1-12c3-422f-862f-def361288e86" />
-<img width="500" alt="Screenshot 2025-10-01 110712" src="https://github.com/user-attachments/assets/9d48bde0-ee46-4530-b825-b66b2302403f" />
-<img width="500" alt="Screenshot 2025-08-30 123404" src="https://github.com/user-attachments/assets/78b6733f-6a94-4c78-b1fd-5e965f8e0932" />
-<img width="500" alt="Screenshot 2025-08-30 123408" src="https://github.com/user-attachments/assets/8ad353a1-46df-4af6-ab42-223e0a553ed7" />
-<img width="500" alt="Screenshot 2025-10-01 111902" src="https://github.com/user-attachments/assets/16ccb733-ee41-4ea7-a43c-dd034cdbaf0d" />
+<img width="500" alt="Screenshot 2025-08-30 123348" src="static/media/screenshots/home.png" />
+<img width="500" alt="Screenshot 2025-10-01 110706" src="static/media/screenshots/signup.png" />
+<img width="500" alt="Screenshot 2025-10-01 110712" src="static/media/screenshots/signin.png" />
+<img width="500" alt="Screenshot 2025-08-30 123404" src="static/media/screenshots/dashboard.png" />
+<img width="500" alt="Screenshot 2025-08-30 123408" src="static/media/screenshots/course_form.png" />
+<img width="500" alt="Screenshot 2025-10-01 111902" src="static/media/screenshots/course_result.png" />
 
 ## 📂 Project Structure
 ```
